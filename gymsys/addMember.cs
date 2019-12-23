@@ -13,7 +13,7 @@ namespace WindowsFormsApplication1
 {
     public partial class addMember : MetroFramework.Forms.MetroForm
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=F:\Wishvantha@Work\C# gymsys\GYMSYS\WindowsFormsApplication1\WindowsFormsApplication1\gymsysdb.mdf;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\gymsysdb.mdf;Integrated Security=True");
         SqlCommand cmd = new SqlCommand();
         public addMember()
         {
@@ -50,6 +50,7 @@ namespace WindowsFormsApplication1
                 cmd.Clone();
                 MessageBox.Show("Data Added Successfully!");
                 con.Close();
+                this.Hide();
             }
             else
             {
