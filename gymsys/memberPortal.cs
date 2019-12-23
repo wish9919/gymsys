@@ -42,7 +42,7 @@ namespace WindowsFormsApplication1
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
             addMember check = new addMember();
             check.ShowDialog();
 

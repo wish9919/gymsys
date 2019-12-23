@@ -50,6 +50,7 @@ namespace WindowsFormsApplication1
                 cmd.Clone();
                 MessageBox.Show("Data Added Successfully!");
                 con.Close();
+                this.Hide();
             }
             else
             {
