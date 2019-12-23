@@ -44,7 +44,7 @@ namespace WindowsFormsApplication1
         {
             this.Close();
             addMember check = new addMember();
-            check.Show();
+            check.ShowDialog();
 
         }
 
