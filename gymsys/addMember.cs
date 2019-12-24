@@ -44,13 +44,23 @@ namespace WindowsFormsApplication1
 
             if (nic != "" & name != "" & gender != "" & email != "" & mobile != "" & dateBirth != "" & address != "" & joinedDate != "" & weight != "" & height != "")
             {
-                con.Open();
-                cmd.CommandText = sqlText;
-                cmd.ExecuteNonQuery();
-                cmd.Clone();
-                MessageBox.Show("Data Added Successfully!");
-                con.Close();
-                this.Hide();
+                try
+                {
+                    con.Open();
+                    cmd.CommandText = sqlText;
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Data Added Successfully!");
+                    this.Hide();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+               
             }
             else
             {

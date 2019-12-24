@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1
         public login()
         {
             InitializeComponent();
-            loginflag = false;
+            loginflag = true;
         }
 
         private void login_Load(object sender, EventArgs e)

@@ -51,5 +51,26 @@ namespace WindowsFormsApplication1
             memberPortal check = new memberPortal();
             check.ShowDialog();
         }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            if (loggedIn == true)
+            {
+                //open login form
+                login check = new login();
+                check.ShowDialog();
+
+                if (check.loginflag == false)
+                {
+                    MessageBox.Show("Login Failed!");
+                }
+                else
+                {
+                    loggedIn = true;
+                }
+            }
+        }
+
+       
     }
 }

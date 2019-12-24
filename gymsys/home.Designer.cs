@@ -33,6 +33,7 @@
             this.member = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.logoutButton = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,11 +96,27 @@
             this.button2.TabIndex = 16;
             this.button2.UseVisualStyleBackColor = false;
             // 
+            // logoutButton
+            // 
+            this.logoutButton.BackColor = System.Drawing.Color.DarkOrange;
+            this.logoutButton.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.logoutButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.logoutButton.Location = new System.Drawing.Point(38, 33);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(133, 43);
+            this.logoutButton.TabIndex = 17;
+            this.logoutButton.Text = "LOGOUT";
+            this.logoutButton.UseCustomBackColor = true;
+            this.logoutButton.UseCustomForeColor = true;
+            this.logoutButton.UseSelectable = true;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
+            // 
             // home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 800);
+            this.Controls.Add(this.logoutButton);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.member);
@@ -115,6 +132,7 @@
             this.Text = "Gym Management System - GYMSYS";
             this.TopMost = true;
             this.Activated += new System.EventHandler(this.home_Activated);
+          
             this.Load += new System.EventHandler(this.home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -127,6 +145,7 @@
         private System.Windows.Forms.Button member;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private MetroFramework.Controls.MetroButton logoutButton;
 
 
     }
